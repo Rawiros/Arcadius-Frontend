@@ -1,0 +1,106 @@
+:root {
+  --background: #453f4e;
+  --text-primary: #ffffff;
+  --code-background: #f6f8fa;
+  --code-text: #24292e;
+  --button-normal: #008BD2;
+  --button-normal-shadow: #006ac0;
+  --button-success-color: #28A745;
+  --button-success-shadow: #159934;
+  --button-error-color: #DC3545;
+  --button-error-shadow: #ca1a2b;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  background-color: var(--background);
+  color: var(--text-primary);
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+}
+
+code {
+  font-size: 105%;
+  line-height: 1.5;
+  padding: 2px 4px;
+  color: var(--code-text);
+  background-color: var(--code-background);
+  border-radius: 3px;
+}
+
+div.top {
+  margin-top: 5vh;
+  text-align: center;
+}
+div.top > h1.title {
+  font-size: 250%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+div.btn {
+  background-color: red;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--button-normal);
+  box-shadow: 0px 0px 5px 0px var(--button-normal-shadow);
+  border-radius: 1mm;
+  padding: 5px 17px 5px 17px;
+  transition: filter 0.35s;
+}
+div.btn.spacing {
+  margin-top: 5px;
+}
+div.btn[data-position=center] {
+  margin: auto;
+}
+div.btn.spacing[data-position=center] {
+  margin: 5px auto;
+}
+div.btn[data-position=left] {
+  float: left;
+}
+div.btn[data-position=right] {
+  float: right;
+}
+div.btn[data-type=big] {
+  padding: 10px 20px 10px 20px;
+}
+div.btn[data-color=normal] {
+  background-color: var(--button-normal);
+  box-shadow: 0px 0px 5px 0px var(--button-normal-shadow);
+}
+div.btn[data-color=success] {
+  background-color: var(--button-success-color);
+  box-shadow: 0px 0px 5px 0px var(--button-success-shadow);
+}
+div.btn[data-color=error] {
+  background-color: var(--button-error-color);
+  box-shadow: 0px 0px 5px 0px var(--button-error-shadow);
+}
+div.btn:hover {
+  filter: brightness(0.85);
+}
+div.btn:active {
+  filter: brightness(0.7);
+}
+div.btn[disabled] {
+  filter: brightness(0.7);
+  cursor: default;
+  pointer-events: none;
+}/*# sourceMappingURL=main.css.map */
